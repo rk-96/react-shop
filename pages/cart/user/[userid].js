@@ -13,20 +13,12 @@ async function fetcher(url) {
         const productDetails = { ...res.data, ...prod }
         return productDetails;
     })
-
-    console.log(data);
-
     return await Promise.all(data);
 }
 
 export default function CartPage() {
     const router = useRouter();
-    console.log(router.query.userid)
-
-
     const { data, error } = useSWR('https://fakestoreapi.com/carts/user/'+router.query.userid, fetcher)
-
-    console.log(data);
     if (error) return <Layout>{error}</Layout>
     if (!data) return (<Layout>
         <div className="spinner-grow text-primary" role="status">

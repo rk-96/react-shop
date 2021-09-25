@@ -23,7 +23,6 @@ export default function ProductPage({data}) {
 }
 
 export async function getServerSideProps(  context) {
-    console.log(context);
     const res = await axios.get(`https://fakestoreapi.com/products/` + context.params.id);
     const data = res.data;
     return {

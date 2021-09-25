@@ -15,17 +15,17 @@ export default function Header() {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link href="/">
-                                <a className={router.pathname == "/" ? "nav-link active" + style.customactive : "nav-link"} aria-current="page" >Home</a>
+                                <a className={router.pathname == "/" ? "nav-link active " + style.customactive : "nav-link"} aria-current="page" >Home</a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/cart/user/2" >
-                                <a className={router.pathname == "/cart/user/[userid]" ? "nav-link active" + style.customactive  : "nav-link"}>Cart</a>
+                                <a className={router.pathname == "/cart/user/[userid]" ? "nav-link active " + style.customactive  : "nav-link"}>Cart</a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/about" >
-                                <a className={router.pathname == "/about" ? "nav-link active" + style.customactive  : "nav-link"}>About</a>
+                                <a className={router.pathname == "/about" ? "nav-link active " + style.customactive  : "nav-link"}>About</a>
                             </Link>
                         </li>
                     </ul>

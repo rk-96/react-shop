@@ -10,16 +10,11 @@ async function fetcher(url) {
         const productDetails = { ...res.data, ...prod }
         return productDetails;
     })
-
-    console.log(data);
-
     return await Promise.all(data);
 }
 
 export default function CartPage() {
     const { data, error } = useSWR('https://fakestoreapi.com/carts/user/2', fetcher)
-
-    console.log(data);
     if (error) return <div>{error}</div>
     if (!data) return <div>Loading ...</div>
 

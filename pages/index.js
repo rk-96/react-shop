@@ -15,7 +15,6 @@ export default function HomePage(props) {
 export async function getStaticProps(){
   const res = await axios.get('https://fakestoreapi.com/products');
   const data = res.data;
-  console.log(data);
   return {
     props:{
       data,
